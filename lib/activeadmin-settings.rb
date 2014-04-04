@@ -23,6 +23,10 @@ module ActiveadminSettings
   mattr_accessor :config_file
   @@config_file = "config/activeadmin_settings.yml"
 
+  def self.setup
+    yield self
+  end
+
   # Load configuration from config/activeadmin_settings.yml
   def self.load_config
     config_file = ::Rails.root.join(@@config_file)
