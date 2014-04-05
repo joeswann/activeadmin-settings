@@ -6,7 +6,7 @@ $ ->
   hide_update_btn = (el) ->
     $(el).closest('tr').find('.update_link').hide()
 
-  $('#settings .form form input, textarea').change ->
+  $('#settings .form form input, textarea, select').change ->
     show_update_btn(this)
 
   $('#settings .form form input, textarea').keypress ->

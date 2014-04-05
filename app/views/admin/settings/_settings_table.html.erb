@@ -47,6 +47,8 @@
                       <%= f.input :string,
                                   :as => :text,
                                   :input_html => { :class => "settings-redactor" } %>
+                    <% when "boolean" %>
+                        <%= f.input :string, :as => :select, :collection => { "Yes" => 1, "No" => 0 } %>
                     <% else %>
                       <%= f.input :string, :placeholder => "#{t '.default' }: " + setting.default_value(locale) %>
                     <% end %>

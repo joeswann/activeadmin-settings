@@ -6,7 +6,7 @@ ActiveAdmin.register_page "Settings" do
 
   menu label: title
 
-  content title: title do    
+  content title: title do
     # Mergin db settings objects and default values
     # from config/activaadmin_settings.yml file.
 
