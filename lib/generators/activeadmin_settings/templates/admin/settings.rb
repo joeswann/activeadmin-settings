@@ -39,7 +39,7 @@ ActiveAdmin.register_page "Settings" do
     end
 
     render  :partial  => "index",
-            :locals   => { :admins => AdminUser.all,
+            :locals   => { :admins => User.all,
                            :groups => groups }
   end
 end
